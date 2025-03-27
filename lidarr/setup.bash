@@ -4,8 +4,6 @@ set -euo pipefail
 SMA_PATH="/usr/local/sma"
 version="1.3"
 
-
-
 echo "*** install packages ***" && \
 curl -LsSf https://astral.sh/uv/install.sh | sh \
 apk add -U --upgrade --no-cache \
