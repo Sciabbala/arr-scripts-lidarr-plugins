@@ -8,7 +8,7 @@ echo "*** install pip ***" && \
 apk add --update py3-pip
 
 echo "*** install uv using pip ***" && \
-py-pip install uv
+py3-pip install uv
 
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
