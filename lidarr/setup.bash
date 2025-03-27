@@ -5,7 +5,7 @@ SMA_PATH="/usr/local/sma"
 version="1.3"
 
 echo "*** update repo to 3.21 ***" && \
-echo -e "http://dl-cdn.alpinelinux.org/alpine/v3.21/main\nhttp://dl-cdn.alpinelinux.org/alpine/v3.21/community" | sudo tee /etc/apk/repositories > /dev/null
+echo -e "http://dl-cdn.alpinelinux.org/alpine/v3.21/main\nhttp://dl-cdn.alpinelinux.org/alpine/v3.21/community" | tee /etc/apk/repositories > /dev/null
 
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
