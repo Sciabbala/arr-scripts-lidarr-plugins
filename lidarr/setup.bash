@@ -4,8 +4,10 @@ set -euo pipefail
 SMA_PATH="/usr/local/sma"
 version="1.3"
 
-echo "*** install packages ***" && \
+echo "*** install uv using curl ***" && \
 curl -LsSf https://astral.sh/uv/install.sh | sh && \
+
+echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
   tidyhtml \
   musl-locales \
