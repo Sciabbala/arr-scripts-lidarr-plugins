@@ -5,7 +5,7 @@ SMA_PATH="/usr/local/sma"
 version="1.3"
 
 echo "*** install pip ***" && \
-apk add --update py-pip
+apk add --update py3-pip
 
 echo "*** install uv using pip ***" && \
 py-pip install uv
