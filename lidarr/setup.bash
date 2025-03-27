@@ -4,11 +4,8 @@ set -euo pipefail
 SMA_PATH="/usr/local/sma"
 version="1.3"
 
-echo "*** install pip ***" && \
-apk add --update py3-pip
-
-echo "*** install uv using pip ***" && \
-py3-pip install uv
+echo "*** update repo to 3.21 ***" && \
+echo -e "http://dl-cdn.alpinelinux.org/alpine/v3.21/main\nhttp://dl-cdn.alpinelinux.org/alpine/v3.21/community" | sudo tee /etc/apk/repositories > /dev/null
 
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
@@ -25,6 +22,7 @@ apk add -U --upgrade --no-cache \
   opustags \
   python3-dev \
   libc-dev \
+  uv \
   parallel \
   npm && \
 echo "*** install freyr client ***" && \
