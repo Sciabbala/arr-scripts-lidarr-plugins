@@ -4,8 +4,11 @@ set -euo pipefail
 SMA_PATH="/usr/local/sma"
 version="1.3"
 
+echo "*** install pip ***" && \
+apk add --update py-pip
+
 echo "*** install uv using pip ***" && \
-py3-pip install uv
+py-pip install uv
 
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
