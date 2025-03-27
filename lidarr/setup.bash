@@ -5,7 +5,7 @@ SMA_PATH="/usr/local/sma"
 version="1.3"
 
 echo "*** install uv using pip ***" && \
-pip install uv
+py3-pip install uv
 
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
