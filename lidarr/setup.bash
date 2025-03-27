@@ -3,10 +3,11 @@ set -euo pipefail
 
 SMA_PATH="/usr/local/sma"
 version="1.3"
-# Manually install uv since Alpine 3.20 does not have the package
-curl -LsSf https://astral.sh/uv/install.sh | sh
+
+
 
 echo "*** install packages ***" && \
+curl -LsSf https://astral.sh/uv/install.sh | sh \
 apk add -U --upgrade --no-cache \
   tidyhtml \
   musl-locales \
